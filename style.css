@@ -7,18 +7,32 @@ body{
     font-optical-sizing: auto;
     font-weight: 14px;
     font-style: normal;
+    background-color: #000000;
     
 }
 .container{
    height: 100vh; 
+   background-color: #000000;
    
    
 }
 .navbar{
-    background-color: #000000;
+    background-color: #0e0e0e;
 }
 
-a{
-    color: rgb(1, 136, 255);
+.nav-link  {
+    color: white;
+}
+
+.navbar-brand{
+    color: aliceblue;
 }
  
+.card{
+  background-color: #000000;
+  color: aliceblue;
+}
+img{
+    width: 5rem;
+    height: 24rem;
+}
