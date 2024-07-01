@@ -7,7 +7,11 @@ body{
     font-optical-sizing: auto;
     font-weight: 14px;
     font-style: normal;
-    background-color: #000000;
+    /* background-color: #000000; */
+    background-image: url(https://i.pinimg.com/564x/f5/b4/3d/f5b43d4b6944865f309876b6d3d17086.jpg);
+    background-repeat: none;
+    background-size: cover;
+
 }
 
 .rowname {
@@ -38,7 +42,8 @@ img{
     /* flex-direction: column;
     /* box-shadow: rgb(202, 202, 202) 0px 3px 5px; */
     transition: transform 500ms;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(240, 248, 255, 0);
     color: white;
 }
 
@@ -58,7 +63,7 @@ img{
     gap:5px
 }
 .navbar{
-    background-color: #000000;
+    background-color: #1f020200;
     margin-bottom: 50px;
 }
 .nav-link  {
