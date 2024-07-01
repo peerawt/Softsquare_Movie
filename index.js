@@ -11,24 +11,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .then((json) => {
       // console.log(json.length);
       let current = new Set();
-      for (let i = 0; i < 5; i++) {
-        let rand = Math.random()*10;
-         rand = Math.floor(rand) ;
-        
-        while(current.has(rand)){
-           rand = Math.random()*10;
-           rand = Math.floor(rand) ;
+      for (let i = 0; i < 10; i++) {
+        let rand = Math.random() * 10;
+        rand = Math.floor(rand);
+
+        while (current.has(rand)) {
+          rand = Math.random() * 10;
+          rand = Math.floor(rand);
         }
-        current.add(rand) ;
-        console.log(current);
-        
+        current.add(rand);
+        console.log(current[0]);
+      } 
+      let curr = Array.from(current)
+      for(let j = 0 ;j<5 ;j++){
         // console.log(rand)
         document.getElementById(
           "show_products"
         ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
-                                        <img src="${json[rand].image}" class="w-100 card-img-top" alt="..." />
+                                        <img src="${json[curr[j]].image}" class="w-100 card-img-top" alt="..." />
                                         <div class="card-body">
-                                          <h5 class="card-title">${json[rand].name}</h5>
+                                          <p class="card-title">${json[curr[j]].name}</p>
                                             
                                            <a href="movieDetail.html" type="button"
               class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</a>
@@ -36,38 +38,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
               class="btn btn-outline-secondary btn-outline-light rounded-pill">120
               mins</button>
                                         </div>
-                                        <a href="movieDetail.html?movieId=${json[rand].id}" class="stretched-link"></a>
+                                        <a href="movieDetail.html?movieId=${json[curr[j]].id}" class="stretched-link"></a>
+                                      </div>`;
+        document.getElementById(
+          "show_products2"
+        ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
+                                        <img src="${json[curr[j+5]].image}" class="w-100 card-img-top" alt="..." />
+                                        <div class="card-body">
+                                          <p class="card-title">${json[curr[j+5]].name}</p>
+                                            
+                                           <a href="movieDetail.html" type="button"
+              class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</a>
+            <button type="button"
+              class="btn btn-outline-secondary btn-outline-light rounded-pill">120
+              mins</button>
+                                        </div>
+                                        <a href="movieDetail.html?movieId=${json[curr[j+5]].id}" class="stretched-link"></a>
                                       </div>`;
       }
-      // const foundJson = json.find(j => j.id === movieId)
-      // if(foundJson){
-      //     document.getElementById('card-title').innerText = foundJson.name;
-      //     document.getElementById('image').src = foundJson.image;
-      //     document.getElementById('rate').innerText = foundJson.rate;
-      //     document.getElementById('description').innerText = foundJson.description;
-      //     document.getElementById('sample').src = foundJson.sample;
-      // }
     });
 });
 
-$('#recipeCarousel').carousel({
-  interval: 10000
-})
+$("#recipeCarousel").carousel({
+  interval: 10000,
+});
 
-$('.carousel .carousel-item').each(function(){
-    var minPerSlide = 3;
-    var next = $(this).next();
+$(".carousel .carousel-item").each(function () {
+  var minPerSlide = 3;
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(":first");
+  }
+  next.children(":first-child").clone().appendTo($(this));
+
+  for (var i = 0; i < minPerSlide; i++) {
+    next = next.next();
     if (!next.length) {
-    next = $(this).siblings(':first');
+      next = $(this).siblings(":first");
     }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    for (var i=0;i<minPerSlide;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
-        
-        next.children(':first-child').clone().appendTo($(this));
-      }
+
+    next.children(":first-child").clone().appendTo($(this));
+  }
 });
