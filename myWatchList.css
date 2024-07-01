@@ -1,0 +1,41 @@
+
+.rowname {
+    color:rgb(62, 61, 61);
+    margin-left: 35px;
+    padding-top: 40px;
+}
+
+img{
+    width: 5rem;
+    height: 18rem;
+}
+
+.card-wrap{
+    display: flex;
+    justify-content:flex-start;
+    margin-block: 50px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(202, 202, 202) 0px 3px 5px;
+    transition: transform 500ms;
+    margin-inline: 50px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.time-button{
+    display: flex;
+    gap:5px
+}
