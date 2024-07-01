@@ -17,6 +17,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 document.getElementById('description').innerText = foundJson.description;
                 document.getElementById('sample').src = foundJson.sample;
             }
+
+            document.getElementById('btn-watchlist').addEventListener('click', () => {
+                var icon = document.getElementById("icon");
+                var button = document.getElementById("btn-watchlist")
+                icon.classList.toggle('bi-plus-lg');
+                icon.classList.toggle('bi-check-lg');
+                button.classList.toggle('btn-success');
+                
+                let watchlist = JSON.parse(sessionStorage.getItem('movie')) || [];
+                watchlist.push({
+                    id: foundJson.id,
+                    name: foundJson.name,
+                    image: foundJson.image
+                });
+                sessionStorage.setItem('movie', JSON.stringify(watchlist));
+                console.log(sessionStorage.getItem('movie'));
+            
+            });
     })
 });
        
