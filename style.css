@@ -31,8 +31,13 @@ body{
 .card{
   background-color: #000000;
   color: aliceblue;
+  transition: transform 500ms;
+
 }
 img{
     width: 5rem;
     height: 24rem;
+}
+.card:hover{
+    transform: scale(1.1);
 }

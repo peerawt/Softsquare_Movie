@@ -18,7 +18,7 @@ body{
 
 img{
     width: 5rem;
-    height: 18rem;
+    height: 22rem;
 }
 
 .card-wrap{
@@ -29,7 +29,7 @@ img{
 
 .card{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     /* box-shadow: rgb(202, 202, 202) 0px 3px 5px; */
     transition: transform 500ms;
     background-color: black;
@@ -53,6 +53,7 @@ img{
 }
 .navbar{
     background-color: #000000;
+    margin-bottom: 50px;
 }
 .nav-link  {
     color: white;
