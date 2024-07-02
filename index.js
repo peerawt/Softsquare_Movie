@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
                                         <img src="${
                                           json[curr[j]].image
-                                        }" class="w-100 card-img-top" alt="..." />
+                                        }" class=" card-img-top" alt="..." />
                                         <div class="card-body">
                                           <p class="card-title">${
                                             json[curr[j]].name
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
                                         <img src="${
                                           json[curr[j + 5]].image
-                                        }" class="w-100 card-img-top" alt="..." />
+                                        }" class="card-img-top" alt="..." />
                                         <div class="card-body">
                                           <p class="card-title">${
                                             json[curr[j + 5]].name
