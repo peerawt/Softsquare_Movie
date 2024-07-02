@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById(
                 "list"
               ).innerHTML += 
-              `     <div class="card" style="width: 13rem;">
+              `     <div class="card" style="width: 16rem;">
                     <img id="image" src="${json[i].image}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p id="title" class="card-text">${json[i].name}</p>
-                    <div class="time-button">
-                        <button type="button" class="btn btn-outline-secondary rounded-pill">Action</button>
-                        <button type="button" class="btn btn-outline-secondary rounded-pill">120 mins</button>
+                   <div class="time-button">
+                        <button type="button"class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</button>
+                        <button type="button"class="btn btn-outline-secondary btn-outline-light rounded-pill">120 mins</button>
                     </div>
                     <a href="movieDetail.html?movieId=${json[i].id}" class="stretched-link"></a>
                 </div>

@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                           <div class="card-body">
                                             <h5 class="card-title">${json[i].name}</h5>
                                              <div class="time-button">
-                                              <button type="button"class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</button>
-                                              <button type="button"class="btn btn-outline-secondary btn-outline-light rounded-pill">120 mins</button>
+                                              <button type="button"class="btn btn-outline-secondary   rounded-pill">Action</button>
+                                              <button type="button"class="btn btn-outline-secondary   rounded-pill">120 mins</button>
                                               </div>
                                               <a href="movieDetail.html?movieId=${json[i].id}" class="stretched-link"></a>
                                             </div>

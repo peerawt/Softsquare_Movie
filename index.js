@@ -21,39 +21,51 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
         current.add(rand);
         console.log(current[0]);
-      } 
-      let curr = Array.from(current)
-      for(let j = 0 ;j<5 ;j++){
+      }
+      let curr = Array.from(current);
+      for (let j = 0; j < 5; j++) {
         // console.log(rand)
         document.getElementById(
           "show_products"
         ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
-                                        <img src="${json[curr[j]].image}" class="w-100 card-img-top" alt="..." />
+                                        <img src="${
+                                          json[curr[j]].image
+                                        }" class="w-100 card-img-top" alt="..." />
                                         <div class="card-body">
-                                          <p class="card-title">${json[curr[j]].name}</p>
+                                          <p class="card-title">${
+                                            json[curr[j]].name
+                                          }</p>
                                             
                                            <a href="movieDetail.html" type="button"
-              class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</a>
+              class="btn btn-outline-secondary  rounded-pill">Action</a>
             <button type="button"
-              class="btn btn-outline-secondary btn-outline-light rounded-pill">120
+              class="btn btn-outline-secondary  rounded-pill">120
               mins</button>
                                         </div>
-                                        <a href="movieDetail.html?movieId=${json[curr[j]].id}" class="stretched-link"></a>
+                                        <a href="movieDetail.html?movieId=${
+                                          json[curr[j]].id
+                                        }" class="stretched-link"></a>
                                       </div>`;
         document.getElementById(
           "show_products2"
         ).innerHTML += ` <div class="card p-3"  style="width: 18rem;">
-                                        <img src="${json[curr[j+5]].image}" class="w-100 card-img-top" alt="..." />
+                                        <img src="${
+                                          json[curr[j + 5]].image
+                                        }" class="w-100 card-img-top" alt="..." />
                                         <div class="card-body">
-                                          <p class="card-title">${json[curr[j+5]].name}</p>
+                                          <p class="card-title">${
+                                            json[curr[j + 5]].name
+                                          }</p>
                                             
                                            <a href="movieDetail.html" type="button"
-              class="btn btn-outline-secondary btn-outline-light rounded-pill">Action</a>
+              class="btn btn-outline-secondary  rounded-pill">Action</a>
             <button type="button"
-              class="btn btn-outline-secondary btn-outline-light rounded-pill">120
+              class="btn btn-outline-secondary  rounded-pill">120
               mins</button>
                                         </div>
-                                        <a href="movieDetail.html?movieId=${json[curr[j+5]].id}" class="stretched-link"></a>
+                                        <a href="movieDetail.html?movieId=${
+                                          json[curr[j + 5]].id
+                                        }" class="stretched-link"></a>
                                       </div>`;
       }
     });

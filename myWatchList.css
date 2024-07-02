@@ -1,41 +1,45 @@
+body{
+    height: 100vh;
+    /* width: 100%; */
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 14px;
+    font-style: normal;
+    /* background-color: #000000; */
+    background-image: url(https://i.pinimg.com/564x/f5/b4/3d/f5b43d4b6944865f309876b6d3d17086.jpg);
+    background-repeat: none;
+    background-size: cover;
 
-.rowname {
-    color:rgb(62, 61, 61);
-    margin-left: 35px;
-    padding-top: 40px;
 }
-
-img{
-    width: 5rem;
-    height: 18rem;
-}
-
-.card-wrap{
-    display: flex;
-    justify-content:flex-start;
-    margin-block: 50px;
-}
-
 .card{
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgb(202, 202, 202) 0px 3px 5px;
-    transition: transform 500ms;
-    margin-inline: 50px;
-}
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform 500ms;
+  border-color: rgba(240, 248, 255, 0);
 
+}
+.card-body{
+    color: white;
+    
+}
 .card:hover{
     transform: scale(1.1);
+
+}
+img{
+    width: 5rem;
+    height: 21rem;
+}
+.warp{
+    margin-top: 52px;
+}
+.wrap-item{
+    padding: 32px;
 }
 
-.card-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.nav-link  {
+    color: white;
 }
 
-.time-button{
-    display: flex;
-    gap:5px
+.navbar-brand{
+    color: aliceblue;
 }

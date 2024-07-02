@@ -14,17 +14,6 @@ body{
 
 }
 
-.rowname {
-    color:rgb(62, 61, 61);
-    margin-left: 35px;
-    padding-top: 40px;
-    overflow-x: scroll;
-    width: flex;
-    font-family: "Libre Franklin", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 14px;
-    font-style: normal;
-}
 
 img{
     width: 5rem;
@@ -73,3 +62,4 @@ img{
 .navbar-brand{
     color: aliceblue;
 }
+
