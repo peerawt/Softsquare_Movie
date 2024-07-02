@@ -1,14 +1,13 @@
 body{
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+   
 }
 
 .wrap{
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     gap: 50px;
 }
 .flip-card {
